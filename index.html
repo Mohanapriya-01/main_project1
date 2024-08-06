@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/5.0.1/redux.legacy-esm.js" integrity="sha512-VCbwlmqXz5fKpvO/4l55lYqYZ4K3fi2xUnXp5pzH4YdFEWOrHwO00sXUFg20gtadJf1lzz/ZZjSNjCEOZWDJjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#" class="Overview">Overview</a></li>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="sidebar-input"><input type="text" placeholder="Search" class="input-text"> <i class="fa-solid fa-magnifying-glass"></i></li>
+            <li class="sidebar-log-sign"><button class="log-sign">Login / Signin</button></li>
+        </ul>
+        <ul>
+            <li><img src="iyappaa.png" alt="" class="brand-logo"></li>
+            <li class="hideOnMobile"><a href="#">Overview</a></li>
+            <li class="hideOnMobile"><a href="#">All Products</a></li>
+            <li class="hideOnMobile"><a href="#">Categories</a></li>
+            <li class="hideOnMobile"><a href="#">Contact Us</a></li>
+            <li class="navbar-input"><input type="text" placeholder="Search" class="input-text"> <i class="fa-solid fa-magnifying-glass"></i></li>
+            <li class="navbar-log-sign"><button class="log-sign">Login / Signin</button></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav><!--navbar-->
+
+    <main>
+        <section class="carousel next">
+            <div class="list">
+                <article class="item other_1">
+                    <div class="main-content" 
+                    style="background-color: #f5bfaf;">
+                        <div class="content">
+                            <h2>Potato Chips, a new product</h2>
+                            <p class="price">$ 20</p>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque? Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut aspernatur. Quos non in sed ratione tenetur harum.
+                            </p>
+                            <button class="addToCard">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="chips.png" alt="">
+                        <figcaption>Potato Chips, a new product</figcaption>
+                    </figure>
+                </article>
+                <article class="item active">
+                    <div class="main-content" 
+                    style="background-color: #FFF2D7;">
+                        <div class="content">
+                            <h2>Garlic Murukku, a new product</h2>
+                            <p class="price">$ 20</p>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque? Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut aspernatur. Quos non in sed ratione tenetur harum.
+                            </p>
+                            <button class="addToCard">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="savory.png" alt="">
+                        <figcaption>Garlic Murukku, a new product</figcaption>
+                    </figure>
+                </article>
+                <article class="item other_2">
+                    <div class="main-content" 
+                    style="background-color: #dedfe1;">
+                        <div class="content">
+                            <h2>Cassavva Chips, a new product</h2>
+                            <p class="price">$ 20</p>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque? Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut aspernatur. Quos non in sed ratione tenetur harum.
+                            </p>
+                            <button class="addToCard">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="thinchips.png" alt="">
+                        <figcaption>Cassavva Chips, a new product</figcaption>
+                    </figure>
+                </article>
+                <article class="item">
+                    <div class="main-content" 
+                    style="background-color: #E0FBE2;">
+                        <div class="content">
+                            <h2>Orange Candy, a new product</h2>
+                            <p class="price">$ 20</p>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque? Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut aspernatur. Quos non in sed ratione tenetur harum.
+                            </p>
+                            <button class="addToCard">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="orangecandy.png" alt="">
+                        <figcaption>Orange Candy, a new product</figcaption>
+                    </figure>
+                </article>
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </section>
+    </main>
+
+    <br>
+
+    <p class="offer-title">DELIGHTFUL DISCOUNTS</p>
+
+    <br>
+
+     <div class="container-fluid">
+        <div class="offer-card">
+            <div class="offer-image">
+                <img src="1.jpg" alt="Snack 1">
+                <div class="discount-badge">20% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>RICE MURUKKU</h2>
+                <p>Get 20% off! Limited time offer.</p>
+                <div class="countdown" id="countdown1"></div>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <div class="offer-image">
+                <img src="2.jpg" alt="Snack 2">
+                <div class="discount-badge">30% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>POTATO CHIPS</h2>
+                <p>Buy one get one free! Limited time offer.</p>
+                <div class="countdown" id="countdown2"></div>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <div class="offer-image">
+                <img src="3.jpg" alt="Snack 2">
+                <div class="discount-badge">10% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>KAI MURUKKU</h2>
+                <p>Buy one get one free! Limited time offer.</p>
+                <div class="countdown" id="countdown3"></div>
+            </div>
+        </div>
+
+         <div class="offer-card">
+            <div class="offer-image">
+                <img src="4.jpg" alt="Snack 2">
+                <div class="discount-badge">10% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>RIBBON MURUKKU</h2>
+                <p>Buy one get one free! Limited time offer.</p>
+                <div class="countdown" id="countdown4"></div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+<div class="container-fluid">
+        <div class="offer-card">
+            <div class="offer-image">
+                <img src="1.jpg" alt="Snack 1">
+                <div class="discount-badge">20% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>RICE MURUKKU</h2>
+                <p>Get 20% off! Limited time offer.</p>
+                <div class="countdown" id="countdown5"></div>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <div class="offer-image">
+                <img src="2.jpg" alt="Snack 2">
+                <div class="discount-badge">30% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>POTATO CHIPS</h2>
+                <p>Buy one get one free! Limited time offer.</p>
+                <div class="countdown" id="countdown6"></div>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <div class="offer-image">
+                <img src="3.jpg" alt="Snack 2">
+                <div class="discount-badge">10% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>KAI MURUKKU</h2>
+                <p>Buy one get one free! Limited time offer.</p>
+                <div class="countdown" id="countdown7"></div>
+            </div>
+        </div>
+
+         <div class="offer-card">
+            <div class="offer-image">
+                <img src="4.jpg" alt="Snack 2">
+                <div class="discount-badge">10% OFF</div>
+            </div>
+            <div class="offer-details">
+                <h2>RIBBON MURUKKU</h2>
+                <p>Buy one get one free! Limited time offer.</p>
+                <div class="countdown" id="countdown8"></div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <img src="banner.png" width="100%" class="img-fluid">
+    </div>
+
+    <br>
+
+    <p class="offer-title">SHOP BY CATEGORIES</p>
+
+    <br>
+    <br>
+
+    <div class="container1">
+        <div class="sweet">
+            <div class="sweet1">
+                <img src="sweet-category.png"  class="sweet-img">
+            </div>
+            <div class="sweet-caption">
+                Sweet
+            </div>
+        </div>
+        <div class="snack">
+            <div class="snack1">
+                <img src="snack-category.png"  class="snack-img">
+            </div>
+            <div class="snack-caption">
+                Snacks
+            </div>
+        </div>
+        <div class="candy">
+            <div class="candy1">
+                <img src="candy-category.png"  class="candy-img">
+            </div>
+            <div class="candy-caption">
+                Candies
+            </div>
+        </div>
+        <div class="grocery">
+            <div class="grocery1">
+                <img src="grocery-category.png"  class="grocery-img">
+            </div>
+            <div class="grocery-caption">
+                Groceries
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+     <div class="container1">
+        <div class="rice">
+            <div class="rice1">
+                <img src="rice-category.png"  class="rice-img">
+            </div>
+            <div class="rice-caption">
+                Rice
+            </div>
+        </div>
+        <div class="oil">
+            <div class="oil1">
+                <img src="oil-category.png"  class="oil-img">
+            </div>
+            <div class="oil-caption">
+                Oil
+            </div>
+        </div>
+        <div class="herbal">
+            <div class="herbal1">
+                <img src="herbal-category.png"  class="herbal-img">
+            </div>
+            <div class="herbal-caption">
+                Herbal & Organic
+            </div>
+        </div>
+        <div class="homeappliances">
+            <div class="homeappliances1">
+                <img src="homeappliance-category.png"  class="homeappliances-img">
+            </div>
+            <div class="homeappliances-caption">
+                HomeAppliances
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <p class="offer-title">POPULAR PRODUCTS</p>
+
+    <section id="tranding">
+      <div class="container">
+        <div class="swiper tranding-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="7.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$20</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Garlic Murukku
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="6.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$20</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Cassavva Chips
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="5.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$40</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Orange Candy
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="4.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$15</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Ribbon Murukku
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="3.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$15</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Kai Murukku
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="2.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$20</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Potato Chips
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="1.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$8</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Kai Murukku
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </div>
+
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <p class="offer-title">ABOUT US</p>
+
+    <br>
+
+    <div>
+        <a href="">
+        <img src="banner1.png" class="img-fluid" width="100%">
+        </a>
+    </div><br><br>
+     
+     <div class="advantages">
+         <div class="home-made">
+            <img src="home-img.png" class="home-img">
+             <h3 class="head-home">Home made</h3>
+             <p class="para-home">fresh, taste treats made at home with simple ingredients</p>
+         </div>
+         <div class="organic">
+            <img src="organic-img.png" class="organic-img">
+             <h3 class="head-organic">100% Organic</h3>
+             <p class="para-organic">Prioritize purity and natural ingrediants for healthier choices</p>
+         </div>
+         <div class="quality">
+            <img src="quality-img.png" class="quality-img">
+             <h3 class="head-quality">Premium Quality</h3>
+             <p class="para-quality">Highest standards of freshness, taste, and reliability</p>
+         </div>
+     </div>
+
+     <br><br>
+
+     <div class="counters">
+        <div>
+            <div class="counter">
+                <i class="fa-solid fa-globe" id="icons"></i>
+                <h1><span data-count="5">0</span>+</h1>
+                <h3>Countries</h3>
+            </div>
+            <div class="counter">
+                <i class="fa-solid fa-ribbon" id="icons"></i>
+                <h1><span data-count="5">0</span>+</h1>
+                <h3>Brands</h3>
+            </div>
+            <div class="counter">
+                <i class="fa-solid fa-boxes-stacked" id="icons"></i>
+                <h1><span data-count="100">0</span>0+</h1>
+                <h3>Products</h3>
+            </div>
+            <div class="counter">
+                <i class="fa-regular fa-handshake" id="icons"></i>
+                <h1><span data-count="25">0</span>+</h1>
+                <h3>Distributors</h3>
+            </div>
+            <div class="counter">
+                <i class="fa-solid fa-users" id="icons"></i>
+                <h1><span data-count="1">0</span>M+</h1>
+                <h3>Customers</h3>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <p class="offer-title">OUR TOP BRANDS</p>
+
+    <br>
+
+    <marquee class="brand-img">
+        <img src="iyappaa.jpg" class="image">
+        <img src="amrith.jpg" class="image">
+        <img src="venba.jpg" class="image">
+        <img src="iyappaa.jpg" class="image">
+        <img src="amrith.jpg" class="image">
+        <img src="venba.jpg" class="image">
+    </marquee>
+
+    <br><br>
+
+    <div class="footer">
+        <div class="empty"></div>
+        <div class="address">
+           
+            <div class="iyappaa-address">
+
+                 <b>Head Office</b>
+
+                 <br>
+
+                IYYAPPAA SWEETS & SNACKS INC
+
+                <p>2721, Markham Road, Unit #18,</p>
+                <p>Scaraborough-M1X 1L5, Toronto,</p>
+                <p>Canada</p>
+            </div>
+
+            <br>
+
+            <div class="branches">
+
+                <b>Branches</b>
+
+                <br>
+
+                IYYAPPAA FOOD INDUSTRIES UK LTD
+
+                <p>No 5, Mameulah Court, Newmachar,</p>
+                <p>Aberdeenshire, Ab21OLS,</p>
+                <p>United Kingdom</p>
+            </div>
+
+            <br>
+
+            <b>Available Countries</b>
+
+            <br>
+
+            <div class="countries">
+                <div class="canada">
+                    <p>Canada</p>
+                    <img src="https://img.icons8.com/?size=100&id=Dum84gAXfBP6&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>USA</p>
+                     <img src="https://img.icons8.com/?size=100&id=yzSggttkqLf4&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>France</p>
+                     <img src="https://img.icons8.com/?size=100&id=5RtaKEr09Jy6&format=png&color=000000" class="flag">
+                </div>
+                 <div class="canada">
+                    <p>Switzerland</p>
+                     <img src="https://img.icons8.com/?size=100&id=nz6Zx2vJbzRG&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>Germany</p>
+                     <img src="https://img.icons8.com/?size=100&id=OyqucOGoByl9&format=png&color=000000" class="flag">
+                </div>
+                <div class="canada">
+                    <p>UK</p>
+                     <img src="https://img.icons8.com/?size=100&id=xapj7ZzAUZKI&format=png&color=000000" class="flag">
+                </div>
+            </div>
+        </div>
+        <div class="footer-category">
+            <b>Categories</b>
+            <div class="category-item">
+                <p>Sweets</p>
+                <p>Snacks</p>
+                <p>Candies</p>
+                <p>Groceries</p>
+                <p>Rice</p>
+                <p>Oil</p>
+                <p>Herbal & Organic</p>
+                <p>Home Appliances</p>
+            </div><br>
+             <b>Popular Brands</b>
+             <div class="brand-name">
+                 <p>Iyappaa</p>
+                 <p>Amirth</p>
+                 <p>Venbaa</p>
+                 <p>Little Krishna</p>
+             </div>
+        </div><br>
+        <div class="faq">
+            <b>FAQ</b>
+            <div class="term-condition">
+                <h2>Terms & Conditions</h2>
+            </div><br>
+            <b>Website</b>
+            <div class="website">
+                <p>www.iyappaa.com</p>
+            </div><br>
+             <b>Contact Us<br>
+             <input type="" name="">@gmail.com
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   
+    <script src="script.js"></script>
+</body>
+</html>
